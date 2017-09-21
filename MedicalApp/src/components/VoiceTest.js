@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Image, StyleSheet, Text, ToastAndroid, TouchableHighlight, View, } from 'react-native';
-
 import Voice from 'react-native-voice';
+import nlp from 'compromise';
 
 class VoiceTest extends Component {
   constructor(props) {
@@ -45,7 +45,7 @@ class VoiceTest extends Component {
     });
   }
   onSpeechResults(e) {
-    this.setState({
+      this.setState({
       results: e.value,
     });
   }
@@ -125,7 +125,7 @@ class VoiceTest extends Component {
             <Text
               key={`result-${index}`}
               style={styles.stat}>
-              {result}
+              { result }
             </Text>
           )
         })}
