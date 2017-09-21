@@ -94,7 +94,7 @@ class VoiceTest extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native Voice!
+          Medical App
         </Text>
         <Text style={styles.instructions}>
           Press the button and start speaking when you hear the beep.

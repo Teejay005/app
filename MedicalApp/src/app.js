@@ -1,39 +1,18 @@
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
-import VoiceTest from './components/VoiceTest';
+import { Provider } from 'react-redux';
+import { applyMiddleware, createStore } from 'redux';
+import reducers from './reducers/index'
+import ReduxThunk from 'redux-thunk';
+import Main from './components/Main';
 
-export default class App extends Component {
-  render() {
+class App extends Component {
+  render () {
+    const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
     return (
-      <View style={styles.container}>
-        <VoiceTest/>
-      </View>
+      <Provider store={store}>
+        <Main/>
+      </Provider>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
-
-AppRegistry.registerComponent('App', () => App);
+ export default App
