@@ -34,6 +34,7 @@ class VoiceTest extends Component {
     });
   }
   onSpeechEnd(e) {
+    console.log(e);
     this.setState({
       end: '√',
     });

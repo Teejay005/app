@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import VoiceTest from './VoiceTest';
+import RecordAudio from './RecordAudio';
 
 class Main extends Component {
   render() {
     return (
       <View style={styles.container}>
         <VoiceTest/>
+        <RecordAudio/>
       </View>
     );
   }
