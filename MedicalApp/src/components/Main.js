@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import VoiceTest from './VoiceTest';
-import RecordAudio from './RecordAudio';
+import AddNote from './AddNote';
 
 class Main extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <VoiceTest/>
-        <RecordAudio/>
+        <AddNote/>
       </View>
     );
   }
